@@ -13,7 +13,7 @@ function add_new_menu_items() {
             "",
             1
     );
-    add_submenu_page('db-settings', 'Submissions', 'Submissions', 'manage_options', 'woo-wholesale-registrations', 'submissions_callback');
+    add_submenu_page('db-settings', 'Submissions', 'Submissions', 'manage_options', 'submissions', 'submissions_callback');
 }
 
 function submissions_callback() {
