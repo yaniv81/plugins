@@ -224,3 +224,21 @@ function city17_update_db($args) {
     echo "ok";
     die();
 }
+
+if (get_option('db_input') == "") {
+
+    global $wpdb;
+    update_option('db_input', 'city17_form_submitions');
+    $createTablename = $wpdb->prefix . "city17_form_submitions";
+
+    $sqlCreate = " CREATE TABLE `" . $createTablename . "` (";
+    $sqlCreate .= " `fname` varchar(255)  NULL,";
+    $sqlCreate .= " `lname` varchar(255)  NULL,";
+    $sqlCreate .= " `email` varchar(255)  NULL,";
+    $sqlCreate .= " `phone` varchar(255)  NULL,";
+    $sqlCreate .= " `country` varchar(255)  NULL,";
+    $sqlCreate .= " `date` varchar(255)  NULL";
+    $sqlCreate .= ") ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;";
+
+    $wpdb->query($sqlCreate);
+}

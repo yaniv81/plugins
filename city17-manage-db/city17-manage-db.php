@@ -91,7 +91,7 @@ function display_options() {
 
     add_settings_section("db_settings", "DB Settings", "display_db_settings", "db-settings");
 
-    add_settings_field("db_input", "Select DB Name: ", "display_db_input", "db-settings", "db_settings");
+    add_settings_field("db_input", "DB Name: ", "display_db_input", "db-settings", "db_settings");
 
     register_setting("db_settings", "db_input");
 }
@@ -134,20 +134,4 @@ function db_updated_option($option_name, $old_value, $value) {
 
 add_action('updated_option', 'db_updated_option', 10, 3);
 
-if (get_option('db_input') == "") {
 
-    global $wpdb;
-    update_option('db_input', 'city17_form_submitions');
-    $createTablename = $wpdb->prefix . "city17_form_submitions";
-
-    $sqlCreate = " CREATE TABLE `" . $createTablename . "` (";
-    $sqlCreate .= " `fname` varchar(255)  NULL,";
-    $sqlCreate .= " `lname` varchar(255)  NULL,";
-    $sqlCreate .= " `email` varchar(255)  NULL,";
-    $sqlCreate .= " `phone` varchar(255)  NULL,";
-    $sqlCreate .= " `country` varchar(255)  NULL,";
-    $sqlCreate .= " `date` varchar(255)  NULL";
-    $sqlCreate .= ") ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;";
-
-    $wpdb->query($sqlCreate);
-}
