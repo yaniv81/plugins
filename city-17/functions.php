@@ -147,7 +147,7 @@ function city_17_scripts() {
     wp_register_script('validate', '//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js', array('jquery'), _S_VERSION);
     wp_register_script('lp-js', get_template_directory_uri() . '/js/lp.js', array('jquery', 'validate'), _S_VERSION);
 
-    if (is_page_template('template-contact.php')) {
+    if (is_page_template('template-targil.php')) {
         wp_enqueue_script('validate');
         wp_enqueue_script('lp-js');
     }

@@ -1,11 +1,14 @@
 <?php
 /*
-  Template Name: Contact Us Page
+  Template Name: Targil
  */
 get_header();
 ?>
 <div class="overlay"></div>
-<div class="popmessage"></div>
+<div class="popmessage">
+    <div class="popmessage-text"></div>
+    <div class="close">x</div>
+</div>
 <div class="wrapper">
     <h1>SUBMIT YOUR APPLICATION</h1>
     <div class="form-container">
