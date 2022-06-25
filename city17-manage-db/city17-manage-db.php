@@ -137,8 +137,8 @@ add_action('updated_option', 'db_updated_option', 10, 3);
 if (get_option('db_input') == "") {
 
     global $wpdb;
-    update_option('db_input', 'default_table');
-    $createTablename = $wpdb->prefix . "default_table";
+    update_option('db_input', 'city17_form_submitions');
+    $createTablename = $wpdb->prefix . "city17_form_submitions";
 
     $sqlCreate = " CREATE TABLE `" . $createTablename . "` (";
     $sqlCreate .= " `fname` varchar(255)  NULL,";
