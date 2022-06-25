@@ -97,7 +97,7 @@ function display_options() {
 }
 
 function display_db_settings() {
-    echo "The header of the theme";
+    echo "Select database name";
 }
 
 function display_db_input() {
